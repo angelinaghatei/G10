@@ -6,12 +6,15 @@
 }
 
 #menubar {
+  display: flex;
   height: 100px;
   position: static;
   background-color: gray;
   margin-bottom: 15px;
+  gap: 30px;
 
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #menubar,

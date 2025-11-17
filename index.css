@@ -1,4 +1,47 @@
 .x {
+  display: flex;
   height: 600px;
   background-color: gray;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.app_container {
+  height: 50px;
+  width: 110px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.app_grid {
+  align-items: center;
+  width: 250px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+.box_grid_section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.box {
+  height: 600px;
+  width: auto;
+  background-color: gray;
+}
+
+.info_section {
+  background-color: gray;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 15px;
 }
