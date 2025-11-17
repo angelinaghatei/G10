@@ -1,0 +1,26 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#menubar {
+  height: 100px;
+  position: static;
+  background-color: gray;
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+#menubar,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  font-weight: 100;
+  font-size: xx-large;
+  font-family: "Courier New", Courier, monospace;
+  color: lightblue;
+}
