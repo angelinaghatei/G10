@@ -1,9 +1,20 @@
+* {
+  color: #3b1113;
+}
+
 .x {
   display: flex;
   height: 600px;
-  background-color: gray;
+
+  background-image: url(background.avif);
+  background-position: center;
+
+  background-size: cover;
+
+  text-align: center;
   justify-content: center;
   align-items: center;
+
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -57,13 +68,18 @@
 .box {
   height: 600px;
   width: auto;
-  background-color: gray;
+  background-color: #fff6eb;
 }
 
 .info_section {
-  background-color: gray;
+  background-color: #fff6eb;
   height: 600px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 15px;
+  padding: 50px;
+}
+.default_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container */
 }
