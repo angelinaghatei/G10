@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 #menubar {
@@ -23,7 +24,6 @@
   text-decoration: none;
   font-weight: 100;
   font-size: xx-large;
-  font-family: "Courier New", Courier, monospace;
   color: #3b1113;
 }
 
@@ -40,7 +40,7 @@
 
 footer {
   display: flex;
-  margin-top: 30px;
+  margin-top: 10px;
   width: auto;
   height: 200px;
   background-color: #fff6eb;
@@ -75,4 +75,32 @@ footer button {
   gap: 100px;
 
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* Mobil-styles her */
+  .icon_container {
+    display: none;
+  }
+
+  #menubar {
+    display: flex;
+    height: 75px;
+    position: static;
+    background-color: #fff6eb;
+    margin-bottom: 15px;
+    gap: 30px;
+
+    justify-content: center;
+    align-items: center;
+  }
+  #menubar a:link,
+  #menubar a:visited,
+  #menubar a:active {
+    text-decoration: none;
+    font-weight: 100;
+    font-size: x-large;
+    font-family: "Courier New", Courier, monospace;
+    color: #3b1113;
+  }
 }
