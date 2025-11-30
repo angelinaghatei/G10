@@ -1,0 +1,210 @@
+:root {
+  --blue-dark: #2e6c85;
+  --blue-mid: #3b8aab;
+  --blue-light: #d5f2ff;
+  --newsletter-bg: #2f6f89;
+  --white: #ffffff;
+  --radius: 14px;
+}
+
+/* ---------- GLOBAL ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f8fa;
+  color: #0a0a0a;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 40px 0 60px;
+}
+
+/* ---------- DESKTOP LAYOUT ---------- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 40px;
+  padding: 0 20px;
+  align-items: stretch; /* gør venstre og højre lige høje */
+}
+
+/* ---------- LEFT IMAGE BOX ---------- */
+
+.imageBox {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: transparent;
+  height: 100%;         /* fyld hele rækkehøjden på desktop */
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fylder hele boksen */
+  object-position: center;
+  display: block;
+}
+
+/* ---------- RIGHT SUBSCRIPTION BOX ---------- */
+
+.subBox {
+  background: var(--blue-dark);
+  border-radius: var(--radius);
+  padding: 40px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.small-label {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.price {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.trial {
+  margin: 6px 0 20px;
+  font-size: 14px;
+}
+
+.subBox h2 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.subBox h3 {
+  margin: 18px 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.subBox ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.buttonWrapper {
+  margin-top: 26px;
+}
+
+.startBtn {
+  background: var(--white);
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ---------- NEWSLETTER ---------- */
+
+.newsletter {
+  background: var(--newsletter-bg);
+  margin: 60px auto 0;
+  max-width: 1200px;
+  padding: 24px 20px 28px;
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--white);
+}
+
+.newsletter h3 {
+  font-weight: 300;
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+
+.newsletterBar {
+  width: 260px;
+  height: 12px;
+  background: var(--blue-light);
+  border-radius: 999px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.newsletterThumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 999px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+  .page {
+    padding: 20px 0 40px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;     /* stack */
+    gap: 20px;
+  }
+
+  .imageBox {
+    height: auto;                   /* lad billedet bestemme højde */
+  }
+
+  .imageBox img {
+    height: auto;                   /* ingen stræk */
+    object-fit: cover;
+  }
+
+  .subBox {
+    padding: 24px 20px 26px;
+    border-radius: 0;
+    border-radius: var(--radius);
+  }
+
+  .price {
+    font-size: 30px;
+  }
+
+  .subBox h2 {
+    font-size: 18px;
+  }
+
+  .subBox ul {
+    font-size: 13px;
+  }
+
+  .buttonWrapper {
+    margin-top: 20px;
+  }
+
+  .startBtn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .newsletter {
+    margin-top: 30px;
+    border-radius: 0;
+    border-radius: var(--radius);
+  }
+}
