@@ -99,7 +99,11 @@ footer button {
   #menubar a:active {
     text-decoration: none;
     font-weight: 100;
-    font-size: x-large;
+    font-size: large;
     color: #3b1113;
   }
+
+  footer h1{
+  font-size: medium;
+}
 }

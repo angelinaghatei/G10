@@ -4,12 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soundwheel – Virksomhed</title>
+    <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="virksomhed.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Import Montserrat from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+    <header> <!-- Menu bar start-->
+        <section id="menubar">
+            <div class="icon_container">
+                <img src="SWicon.avif" alt="SWicon" class="menu_icon_img">
+            </div>
+            <a href="index.html">SoundWheel</a>
+            <a href="abonnement.html">Abonnement</a>
+            <a href="virksomhed.html">Virksomhed</a>
+        </section>
+    </header> <!-- Menu bar slut-->
     <!-- HERO -->
     <section class="hero">
         <img src="ColorWheel Farver 1.png" alt="" class="hero-image">
@@ -83,10 +96,13 @@
 
     </section>
 
-    <!-- FOOTER -->
-    <footer class="sw-footer">
-        <div class="wave"></div>
-
+    <footer>
+        <h1>Tilmeld dig vores nyhedsbrev!</h1>
+        <br>
+        <section>
+            <input type="email">
+            <button>Submit</button>
+        </section>
     </footer>
 
 </body>
