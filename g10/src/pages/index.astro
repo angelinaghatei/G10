@@ -1,16 +1,67 @@
 ---
+import "../styles/default.css";
+import "../styles/index.css";
+import "../styles/abonnement.css";
 
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import InfoSection from "../components/Info.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<BaseLayout>
+<Header />
+
+<section class="x">
+    <div class="icon_mobile_container">
+        <img src="/SWicon.avif" alt="SWicon">
+    </div>
+
+    <section>
+        <a href="/abonnement">
+            <div class="flexible_box">
+                <h3>Prøv 14 dage gratis!</h3>
+            </div>
+        </a>
+
+        <section class="app_grid">
+            <a href="https://apps.apple.com/...">
+                <div class="app_container">Apple</div>
+            </a>
+            <a href="https://play.google.com/...">
+                <div class="app_container">Android</div>
+            </a>
+        </section>
+    </section>
+</section>
+
+<section class="box_grid_section">
+   <div class="box bg1">
+  <a href="">
+    <div class="box_text">
+      <h1>SoundWheel Pro</h1>
+    </div>
+  </a>
+</div>
+
+    <div class="box bg2">
+        <a href="">
+            <div  class="box_text">
+                <h1>Kategorier</h1>
+            </div>
+        </a>
+    </div>
+    <div class="box bg3">
+        <a href="">
+            <div  class="box_text">
+                <h1>Om SoundWheel</h1>
+            </div>
+        </a>
+    </div>
+</section>
+
+<InfoSection />
+
+<Footer />
+</BaseLayout>

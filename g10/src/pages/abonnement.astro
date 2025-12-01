@@ -1,0 +1,54 @@
+---
+import "../styles/default.css";
+import "../styles/index.css";
+import "../styles/abonnement.css";
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <Header />
+
+  <div class="page">
+    <main class="container">
+      <!-- VENSTRE: BILLEDE -->
+      <div class="imageBox">
+        <img src="/pic.webp" alt="SoundWheel app mockup" />
+      </div>
+
+      <!-- HØJRE: ABONNEMENT -->
+      <section class="subBox">
+        <p class="small-label">Fra</p>
+        <p class="price">49 kr. / mdr</p>
+        <p class="trial">14 dages gratis prøveperiode</p>
+
+        <h2>Abonnement</h2>
+
+        <h3>Fuld adgang til SoundWheel App</h3>
+        <ul>
+          <li>Musikdrevede visualiserings øvelser</li>
+          <li>Dansk eller engelsk guide</li>
+          <li>Mulighed for at slå guide til og fra</li>
+          <li>9 temaer: Heriblandt Rest, Rise, Create og Receive</li>
+          <li>Mere musik, mindre tale</li>
+          <li>Motiverende introforløb i 9 trin</li>
+          <li>Nemt at opsige</li>
+        </ul>
+
+        <h3>Fuld adgang til KidsWheel</h3>
+        <ul>
+          <li>Lydrejser for børn</li>
+          <li>4 temaer: Sov godt, Ny energi, Stå sikkert og Balance</li>
+        </ul>
+
+        <div class="buttonWrapper">
+          <button class="startBtn">Start prøveperiode</button>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</BaseLayout>
