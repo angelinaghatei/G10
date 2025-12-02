@@ -1,0 +1,170 @@
+* {
+  color: #3b1113;
+  font-family: "Montserrat", sans-serif;
+}
+
+.x {
+  display: flex;
+  height: 600px;
+
+  background-image: url(background.avif);
+  background-position: center;
+
+  background-size: cover;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.x a:link,
+.x a:visited,
+.x a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.flexible_box {
+  display: flex;
+  border-radius: 50px;
+  height: 75px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.app_container {
+  display: flex;
+  height: 50px;
+  width: 110px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_grid {
+  align-items: center;
+  width: 250px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+.box_grid_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  height: 600px;
+  width: auto;
+  background-color: #fff6eb;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box a:link,
+.box a:visited,
+.box a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.bg1 {
+  background-image: url(womanwithphone.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg2 {
+  background-image: url(manwithphone.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg3 {
+  background-image: url(outsidewithphonewoman.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.info_section {
+  background-color: #fff6eb;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  padding: 50px;
+}
+
+.info_section p {
+  font-size: 1.2rem;
+}
+
+.default_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container */
+}
+
+.icon_mobile_container {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Mobil-styles her */
+
+  .box {
+    display: flex;
+    height: 200px;
+    width: auto;
+    background-color: #fff6eb;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box_grid_section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .info_section {
+    background-color: #fff6eb;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+  }
+  .info_section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .default_img {
+    display: none;
+  }
+
+  .icon_mobile_container {
+    display: contents;
+  }
+}

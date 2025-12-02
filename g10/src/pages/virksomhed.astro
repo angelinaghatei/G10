@@ -1,0 +1,85 @@
+---
+// Virksomhed page for SoundWheel
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/virksomhed.css';
+---
+
+<BaseLayout title="Soundwheel – Virksomhed">
+    <Header />
+    <!-- HERO -->
+    <section class="hero">
+        <img src="/ColorWheel Farver 1.png" alt="" class="hero-image">
+
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <p class="hero-kicker">Guided soundscapes for modern life</p>
+                <h1>Better breaks for busy minds</h1>
+                <button class="btn-primary">Start listening</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAGS -->
+    <section class="soundscape">
+        <h2>What kind of Soundscape are you looking for?</h2>
+
+        <div class="tags">
+            <button>De-stress</button>
+            <button>Sleep soundly</button>
+            <button>Manage anxiety</button>
+            <button>Re-energize</button>
+            <button>Practice meditation</button>
+            <button>Create space</button>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="why">
+
+        <div class="row">
+            <div class="text-box">
+                <h3>Better breaks for employees</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam,
+                    odio at gravida tempus, velit nisl posuere sapien, sed facilisis lorem
+                    nunc nec leo.
+                </p>
+            </div>
+
+            <img src="/image 37.png" class="img-box" alt="">
+        </div>
+
+        <div class="row">
+            <img src="/image 39.png" class="img-box" alt="">
+
+            <div class="text-box light">
+                <h3>Fits into your workday</h3>
+                <ul>
+                    <li>4–10 min guided micro-breaks</li>
+                    <li>Science-based sound and narration</li>
+                    <li>Accessible via web and mobile</li>
+                    <li>Easy onboarding for teams</li>
+                    <li>Usage insights included</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-box">
+                <h3>Designed for modern teams</h3>
+                <p>
+                    Soundwheel is rethinking traditional sound meditation to fit
+                    hybrid, fast-paced work cultures without pressure for "perfect
+                    meditation".
+                </p>
+            </div>
+
+            <img src="/group-session.jpg" class="img-box" alt="">
+        </div>
+
+    </section>
+
+    <Footer />
+</BaseLayout>
