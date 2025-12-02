@@ -105,16 +105,3 @@ body {
   border-radius: 16px;
   object-fit: cover;
 }
-
-/* FOOTER */
-.sw-footer {
-  text-align: center;
-  padding: 60px 0 30px;
-  color: #666;
-}
-
-.wave {
-  width: 100%;
-  height: 120px;
-  background: url("image\ 38.png") center/cover no-repeat;
-}

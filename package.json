@@ -1,0 +1,11 @@
+{
+  "name": "G10-root",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm --prefix g10 run dev",
+    "install": "npm --prefix g10 install",
+    "build": "npm --prefix g10 run build",
+    "preview": "npm --prefix g10 run preview"
+  }
+}

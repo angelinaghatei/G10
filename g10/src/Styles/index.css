@@ -43,6 +43,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  color: #3b1113;
 }
 
 .app_grid {
@@ -67,6 +68,7 @@
 
 .box_grid_section a h1 {
   color: #3b1113;
+  gap: 10px;
 }
 .box {
   display: flex;
@@ -113,10 +115,12 @@
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr;
   padding: 50px;
+  gap: 20px;
 }
 
 .info_section p {
   font-size: 1.2rem;
+  padding-top: 20px;
 }
 
 .default_img {
@@ -127,11 +131,6 @@
 
 .icon_mobile_container {
   display: none;
-}
-
-footer {
-  color: #3b1113;
-  gap: 10px;
 }
 
 @media (max-width: 768px) {
