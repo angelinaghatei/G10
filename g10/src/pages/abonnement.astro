@@ -6,6 +6,13 @@ import "../Styles/abonnement.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { fetchAbonnementSection } from '../lib/supabase.js';
+
+// Fetch content from Supabase
+const allContent = await fetchAbonnementSection('hero');
+const hero = allContent.length > 0 ? allContent[0] : null;
+
+const features = await fetchAbonnementSection('features');
 ---
 
 <BaseLayout>
@@ -18,30 +25,42 @@ import Footer from '../components/Footer.astro';
         <img src="/pic.webp" alt="SoundWheel app mockup" />
       </div>
 
-      <!-- HØJRE: ABONNEMENT -->
+      <!-- HØJRE: DYNAMISK ABONNEMENT -->
       <section class="subBox">
-        <p class="small-label">Fra</p>
-        <p class="price">49 kr. / mdr</p>
-        <p class="trial">14 dages gratis prøveperiode</p>
+        {hero ? (
+          <>
+            <p class="small-label">Fra</p>
+            <p class="price">49 kr. / mdr</p>
+            <p class="trial">14 dages gratis prøveperiode</p>
 
-        <h2>Abonnement</h2>
+            <h2>{hero.title}</h2>
+            <p>{hero.body}</p>
+          </>
+        ) : (
+          <>
+            <p class="small-label">Fra</p>
+            <p class="price">49 kr. / mdr</p>
+            <p class="trial">14 dages gratis prøveperiode</p>
+            <h2>Abonnement</h2>
+          </>
+        )}
 
-        <h3>Fuld adgang til SoundWheel App</h3>
-        <ul>
-          <li>Musikdrevede visualiserings øvelser</li>
-          <li>Dansk eller engelsk guide</li>
-          <li>Mulighed for at slå guide til og fra</li>
-          <li>9 temaer: Heriblandt Rest, Rise, Create og Receive</li>
-          <li>Mere musik, mindre tale</li>
-          <li>Motiverende introforløb i 9 trin</li>
-          <li>Nemt at opsige</li>
-        </ul>
-
-        <h3>Fuld adgang til KidsWheel</h3>
-        <ul>
-          <li>Lydrejser for børn</li>
-          <li>4 temaer: Sov godt, Ny energi, Stå sikkert og Balance</li>
-        </ul>
+        {features.length ? (
+          <>
+            <h3>Funktioner</h3>
+            {features.map(f => (
+              <div>
+                {f.title ? <h4>{f.title}</h4> : null}
+                {f.body ? <p>{f.body}</p> : null}
+                {f.list_items ? (
+                  <ul>
+                    {f.list_items.map((item: string) => <li>{item}</li>)}
+                  </ul>
+                ) : null}
+              </div>
+            ))}
+          </>
+        ) : null}
 
         <div class="buttonWrapper">
           <button class="startBtn">Start prøveperiode</button>

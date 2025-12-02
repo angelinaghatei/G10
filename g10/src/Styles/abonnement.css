@@ -90,13 +90,25 @@ body {
 }
 
 .subBox h3 {
-  margin: 18px 0 6px;
+  margin: 24px 0 12px;
   font-size: 16px;
   font-weight: 700;
 }
 
+.subBox h4 {
+  margin: 16px 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.subBox p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
 .subBox ul {
-  margin: 0;
+  margin: 8px 0 20px;
   padding-left: 20px;
   line-height: 1.8;
   font-size: 14px;
