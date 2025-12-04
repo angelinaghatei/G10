@@ -1,7 +1,6 @@
 [build]
-  base = "g10"
-  command = "npm run build"
-  publish = "dist"
+  command = "cd g10 && npm install && npm run build"
+  publish = "g10/dist"
 
 [[redirects]]
   from = "/*"
