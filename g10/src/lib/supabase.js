@@ -1,14 +1,15 @@
 import { createClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = typeof import.meta !== "undefined" && import.meta.env && import.meta.env.PUBLIC_SUPABASE_URL ? import.meta.env.PUBLIC_SUPABASE_URL : process.env.SUPABASE_URL;
+// Try to get from environment variables, fallback to hardcoded values
+const SUPABASE_URL = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.PUBLIC_SUPABASE_URL)
+  ? import.meta.env.PUBLIC_SUPABASE_URL
+  : "https://mvbyxrayskzpyowmqohd.supabase.co";
 
-const SUPABASE_ANON_KEY = typeof import.meta !== "undefined" && import.meta.env && import.meta.env.PUBLIC_SUPABASE_ANON_KEY ? import.meta.env.PUBLIC_SUPABASE_ANON_KEY : process.env.SUPABASE_ANON_KEY;
+const SUPABASE_ANON_KEY = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.PUBLIC_SUPABASE_ANON_KEY)
+  ? import.meta.env.PUBLIC_SUPABASE_ANON_KEY
+  : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im12Ynl4cmF5c2t6cHlvd21xb2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ2OTU5MDEsImV4cCI6MjA4MDI3MTkwMX0.NJZPrINZkccbr88KvH4uEeAD9kYc7EmVPHmxH9y9PDg";
 
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  console.warn("Supabase: Missing SUPABASE_URL or SUPABASE_ANON_KEY environment variables.");
-}
-
-export const supabase = createClient(SUPABASE_URL || "", SUPABASE_ANON_KEY || "");
+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export async function fetchAbonnement() {
   const { data, error } = await supabase.from("abonnement_content").select("*").order("id", { ascending: true });
