@@ -7,7 +7,7 @@
   display: flex;
   height: 600px;
 
-  background-image: url(background.avif);
+  background-image: url(background.webp);
   background-position: center;
 
   background-size: cover;
@@ -86,13 +86,13 @@
 }
 
 .bg1 {
-  background-image: url(womanwithphone.jpg);
+  background-image: url(womanwithphone.webp);
   background-position: center;
   background-size: cover;
 }
 
 .bg2 {
-  background-image: url(manwithphone.jpg);
+  background-image: url(manwithphone.webp);
   background-position: center;
   background-size: cover;
 }
